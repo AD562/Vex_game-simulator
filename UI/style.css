@@ -1,0 +1,177 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #1b1b1b;
+  display: flex;
+}
+
+canvas {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: -1;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1b1b1b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Robots Data */
+
+.data {
+  position: absolute;
+  top: 25rem;
+  left: 1rem;
+  z-index: 1;
+}
+
+.title {
+  font-family: monospace;
+  color: white;
+}
+
+/* Settings Containers*/
+
+.settings {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 40%;
+  min-width: 550px;
+  height: 100%;
+  margin-left: 430px;
+}
+
+.col1, .col2, .col3 {
+  flex-direction: column;
+  width: 33%;
+}
+
+/* Settings Inputs */
+
+.inputLabel {
+  color: white;
+  font-family: monospace;
+  margin-bottom: 5px;
+}
+
+.selectInput, .numberInput {
+  font-family: monospace;
+  color: white;
+  background-color: #1b1b1b;
+  border: 1px solid white;
+}
+
+/* Multiselect Input */
+
+.multiselectInput {
+  width: 70%;
+  margin-bottom: 5px;
+  padding: 5px;
+  max-height: 65px;
+  overflow-y: scroll;
+  border: 1px solid white;
+}
+
+.multiSelectOption {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.checkbox {
+  margin-right: 5px;
+}
+
+.checkboxLabel {
+  color: white;
+  font-family: monospace;
+  margin-left: 2px;
+  font-size: 0.7rem;
+}
+
+/* Toggle Input */
+
+.toggleInputContainer {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 17px;
+  margin-top: 3px;
+}
+
+.toggleInputContainer .toggleInput {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggleInputContainer .roundToggle {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 1px;
+  right: 0;
+  bottom: 0;
+  background-color: #1b1b1b;
+  border: 1px solid white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.toggleInputContainer .roundToggle:before {
+  position: absolute;
+  content: "";
+  height: 11px;
+  width: 12px;
+  left: 1px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.toggleInputContainer .toggleInput:checked + .roundToggle {
+  background-color: #2196F3;
+}
+
+.toggleInputContainer .toggleInput:focus + .roundToggle {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+.toggleInputContainer .toggleInput:checked + .roundToggle:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+
+/* Graph */
+.graph {
+  position: absolute;
+  bottom: 35vh;
+  left: 0;
+  align-self: center;
+}
+
+#graph {
+  z-index: 1;
+  width: 97vw;
+  height: 200px;
+  border: 1px solid white;
+}
