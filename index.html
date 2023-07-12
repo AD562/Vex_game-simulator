@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./UI/style.css">
+    <title>VEX Spin-up Simulator</title>
+  </head>
+
+  <body>
+
+    <!-- Robots Data -->
+    <div class="data">
+      <h2 class="title currentScore" id="currentScore">Current Top Score: 0</h2>
+    </div>
+
+    <!-- Settings -->
+    <div class="settings">
+
+      <div class="col1">
+        <!-- Driving Mode -->
+        <h4 class="inputLabel mode">Mode:</h4>
+        <select class="selectInput mode">
+          <option value="competition">Competition</option>
+          <option value="driving">Driving</option>
+        </select>
+
+        
+
+      </div>
+
+    </div>
+
+  </body>
+
+  <!-- UI Functions -->
+  <script src="UI/js/inputVariables.js"></script>
+  <script src="UI/js/paramsVariables.js"></script>
+
+  <!-- Libraries -->
+  <script src="libraries/p5.js"></script>
+  <script src="libraries/matrix.js"></script>
+  <script src="libraries/nn.js"></script>
+
+
+  <!-- Helper Functions -->
+  <script src="helper_functions/linesIntersect.js"></script>
+  <script src="helper_functions/rotatePoint.js"></script>
+  <script src="helper_functions/nearestPointOnLine.js"></script>
+
+  <!-- Classes -->
+  <script src="classes/Field.js"></script>
+  <script src="classes/Disc.js"></script>
+  <script src="classes/Robot.js"></script>
+  <script src="classes/Goal.js"></script>
+
+  <!-- Main Sketch -->
+  <script src="sketch.js"></script>
+
+</html>
